@@ -17,6 +17,9 @@ Zabbix Server Action to Slack.com
 cd /usr/lib/zabbix/alertscripts    # AlertScriptsPath
 wget https://raw.githubusercontent.com/bageljp/zabbix-slack/master/slack.sh
 chmod a+x slack.sh
+mkdir /usr/share/zabbix/slack/
+chown zabbix:zabbix /usr/share/zabbix/slack/
+chmod 755 /usr/share/zabbix/slack/
 vi slack.sh
 ```
 
