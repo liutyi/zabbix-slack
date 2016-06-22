@@ -21,6 +21,14 @@ mkdir /usr/share/zabbix/slack/
 chown zabbix:zabbix /usr/share/zabbix/slack/
 chmod 755 /usr/share/zabbix/slack/
 vi slack.sh
+vi /etc/httpd/conf.d/zabbix.conf
+```
+
+/etc/httpd/conf.d/zabbix.conf
+```
+<Directory "/usr/share/zabbix/slack">
+    Require all granted
+</Directory>
 ```
 
 <table>
