@@ -6,7 +6,7 @@ slack_username='Zabbix'
 channel="$1"
 title="$2"
 params="$3"
-emoji=':ghost:'
+
 timeout="5"
 cmd_curl="/usr/bin/curl"
 cmd_wget="/usr/bin/wget"
@@ -19,8 +19,8 @@ zabbix_password="zabbixpassword"
 chart_period=3600
 chart_width=1280
 chart_height=390
-chart_baseurl="${zabbix_baseurl}/slack_charts"
-chart_basedir="/tmp/slack_charts"
+chart_baseurl="${zabbix_baseurl}/slack"
+chart_basedir="/usr/share/zabbix/slack"
 chart_cookie="/tmp/zcookies.txt"
 
 # set params
@@ -79,7 +79,6 @@ fi
 payload="payload={
   \"channel\": \"${channel}\",
   \"username\": \"${slack_username}\",
-  \"icon_emoji\": \"${emoji}\",
   \"attachments\": [
     {
       \"fallback\": \"Date / Time: ${datetime} - ${title}\",
